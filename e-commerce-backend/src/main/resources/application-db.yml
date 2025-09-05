@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/myservicedb
+    username: myservice
+    password: AEmin_899_@!
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        default_schema: myservice_schema
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+    
+
+  liquibase:
+    enabled: true
+    change-log: classpath:/liquibase/changelog-master.yml
+    database-change-log-table: DATABASECHANGELOG
+    database-change-log-lock-table: DATABASECHANGELOGLOCK
+    default-schema: myservice_schema

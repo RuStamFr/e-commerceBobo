@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #f3f6fa;
+}
+
+.login-container {
+  background: white;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  max-height: 800px;
+  height: auto;
+}
+h2 {
+  text-align: center;
+  color: #003366;
+}
+.admin-user-link {
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  padding-right: 40px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  line-height: 1.2;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#togglePassword {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  outline: none;
+}
+
+/* Скрываем и показываем иконки */
+#eyeOpen {
+  display: block; /* теперь открыт глаз виден изначально */
+  width: 20px;
+  height: 20px;
+  stroke: #003366;
+}
+
+#eyeClosed {
+  display: none; /* закрытый глаз скрыт */
+  width: 20px;
+  height: 20px;
+  stroke: #003366;
+}
+
+.button-login {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.button-login:hover {
+  background-color: rgb(2, 35, 71);
+}
+.reg-store-link {
+  display: flex;
+  justify-content: center;
+}
+.reg-store-link a {
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+
+  color: #003366;
+}
+.reg-store-link a:hover {
+  color: rgb(245, 148, 92);
+}
+.error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+@media (min-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .login-container {
+    margin: 40px 20px;
+  }
+}

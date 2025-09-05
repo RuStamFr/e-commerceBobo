@@ -1,0 +1,125 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fb;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+.permission-stores-main {
+  display: flex;
+  height: auto;
+  background-color: #f0f4f8;
+}
+.container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  max-width: 100%;
+  overflow: auto;
+  flex: 1;
+  margin: 40px 0;
+  width: 800px;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+h1,
+h2 {
+  color: #1a237e;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-bottom: 40px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.1);
+}
+
+select,
+textarea,
+input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #fafafa;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.checkbox-list label {
+  display: block;
+  margin: 6px 0;
+  font-weight: 500;
+}
+
+.readonly-info p {
+  font-size: 14px;
+  margin: 4px 0;
+  color: #555;
+}
+
+.submit-btn {
+  background-color: #3949ab;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #283593;
+}
+
+.permissions-table {
+  margin-top: 30px;
+}
+
+.permissions-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.permissions-table th,
+.permissions-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  text-align: left;
+}
+
+.permissions-table th {
+  background-color: #eeeeff;
+  font-weight: 600;
+}
+
+.permissions-table td {
+  background-color: #fafbff;
+}
+@media (max-width: 600px) {
+  .container {
+    margin: 40px 20px;
+  }
+}

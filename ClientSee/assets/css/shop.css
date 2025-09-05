@@ -1,0 +1,156 @@
+/* body {
+  font-family: Arial;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+input,
+button {
+  display: block;
+  margin: 10px 5px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.row {
+  display: flex;
+  gap: 10px;
+}
+.row input {
+  flex: 1; */
+
+.shopContainer {
+  display: flex;
+  padding-top: 170px;
+  width: 100%;
+}
+.filter-box-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.filter-box-wrapper.open {
+  max-height: 1000px;
+}
+
+.ShopFilter {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 40px;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+#toggle-filters {
+  width: 60px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.ShopFilter button img {
+  width: 30px;
+  transition: all 1s ease;
+}
+.shopContainer-products {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.h1-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.product-card {
+  justify-content: center;
+  width: 20%;
+  border: 1px solid #ccc;
+  margin: 10px 10px;
+  padding: 15px;
+  font-size: 18px;
+}
+.img {
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+.filter-box-wrapper.open + .filter-toggle-btn img {
+  transform: rotate(90deg);
+}
+
+#filter-icon.cross {
+  content: url("./assets/Img/CloseSVG.svg");
+}
+
+p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+button {
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ff9900;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .shopContainer {
+    padding-top: 100px;
+  }
+  .shopContainer-products {
+    display: none;
+  }
+  .h1-box {
+    font-size: 11px;
+  }
+  .product-card-box p {
+    font-size: 12px;
+  }
+  .filter-box-wrapper {
+    max-height: 0;
+  }
+
+  .filter-box-wrapper.open {
+    max-height: 1000px;
+  }
+
+  .toggle-button {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 601px) {
+  .filter-box-wrapper {
+    max-height: none;
+  }
+
+  .toggle-button {
+    display: none;
+  }
+}

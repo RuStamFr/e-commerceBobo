@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/sellProducts.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top-header">
+        <div class="left-section">
+          <a class="header-logo-link" href="./index.html">
+            <img src="#" alt="BOBO" class="header-logo" />
+          </a>
+        </div>
+        <div class="deliver-to">
+          <span class="small-text">Deliver to</span>
+          <span class="bold-text" id="countryName">Detecting…</span>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search BOBO" />
+          <button class="search-button">🔍</button>
+        </div>
+        <div id="boboSearchDropdown" class="bobo-search-dropdown"></div>
+        <div class="line"></div>
+        <div class="right-section">
+          <div class="language">
+            <img src="https://flagcdn.com/us.svg" width="20" alt="EN" /> EN
+          </div>
+          <div class="account">
+            <a href="./signIn.html" class="small-text" id="userGreeting"
+              >Hello, sign in</a
+            ><br />
+            <!-- <span class="bold-text">Account & Lists ▼</span> -->
+          </div>
+          <div id="logoutButton" class="logout-btn" role="button" tabindex="0">
+            <svg
+              class="logout-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16 17l5-5-5-5M21 12H9"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12 19a3 3 0 01-3 3H6a3 3 0 01-3-3V5a3 3 0 013-3h3a3 3 0 013 3"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <span class="logout-text">Logout</span>
+          </div>
+          <div class="orders">
+            <a href="returnAndOrders.html" class="small-text">Returns</a><br />
+            <a href="returnAndOrders.html" class="bold-text">& Orders</a>
+          </div>
+          <a class="cart" id="cartLink" href="./cart.html">
+            <img src="./assets/Img/CartSVG.svg" alt="" />
+            <span class="cart-count">0</span>
+          </a>
+        </div>
+        <!-- Mobile NavBar -->
+        <button class="burger-btn" onclick="toggleMenu()">☰</button>
+
+        <div class="overlay" onclick="toggleMenu()" id="overlay"></div>
+
+        <div class="sidebar" id="sidebar">
+          <div class="sidebar-header">
+            <a class="sidebar-header-link" id="accountLink" href="#">
+              <img src="./assets/Img/User.png" alt="" />
+            </a>
+            <a class="sidebar-header-link" id="cartLink" href="./cart.html">
+              <img src="./assets/Img/CartSVG.svg" alt="" />
+            </a>
+            <div class="sidebar-line"></div>
+          </div>
+
+          <div class="mobile-search-bar">
+            <input type="text" placeholder="Search BOBO" />
+            <button class="mobile-search-button">🔍</button>
+          </div>
+          <div class="mobile-nav-items">
+            <div class="mobile-nav-item">
+              <a class="mobile-nav-item-link" href="./shop.html">Products</a>
+            </div>
+            <div class="mobile-nav-item">
+              <a class="mobile-nav-item-link" href="./costumerServis.html"
+                >Costumer Servis</a
+              >
+            </div>
+            <div class="mobile-nav-item">
+              <a class="mobile-nav-item-link" href="./ourStores.html"
+                >Our Stores</a
+              >
+            </div>
+            <div class="mobile-nav-item">
+              <a class="mobile-nav-item-link" href="./aboutUs.html">
+                About Us</a
+              >
+            </div>
+          </div>
+
+          <div class="nav-bar-language">
+            <img src="https://flagcdn.com/us.svg" width="20" alt="EN" />
+            <select name="language" id="language-select">
+              <option class="navbar-language" value="EN">EN</option>
+              <option class="navbar-language" value="AZ">AZ</option>
+              <option class="navbar-language" value="RU">RU</option>
+            </select>
+          </div>
+          <div
+            id="mobileLogoutButton"
+            class="mobile-logout-btn"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              class="mobile-logout-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16 17l5-5-5-5M21 12H9"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12 19a3 3 0 01-3 3H6a3 3 0 01-3-3V5a3 3 0 013-3h3a3 3 0 013 3"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <span class="mobile-logout-text">Logout</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="nav-bar">
+        <div class="nav-item">
+          <a class="nav-item" href="./shop.html">Products</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-item" href="./costumerServis.html">Costumer Servis</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-item" href="./ourStores.html">Our Stores</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-item" href="./aboutUs.html"> About Us</a>
+        </div>
+      </nav>
+    </header>
+    <main class="sell-products-main">
+      <div class="sell-products-title-wrapper">
+        <h1>Start Selling on BOBO Today!</h1>
+        <p class="sell-products-title-desc">
+          A simple way to open an online store and start earning.
+        </p>
+      </div>
+
+      <div class="sell-products-wrapper">
+        <section class="sell-products-section">
+          <h2>Why BOBO?</h2>
+          <ul>
+            <li>
+              <strong>Simple registration</strong><br />You can register in just
+              a few minutes — no complicated forms.
+            </li>
+            <li>
+              <strong>Fast store moderation</strong><br />After submitting your
+              application, your store will be reviewed within 24 hours.
+            </li>
+            <li>
+              <strong>Sell across the country and beyond</strong><br />Receive
+              orders from different cities and countries — BOBO works globally.
+            </li>
+            <li>
+              <strong>24/7 support</strong><br />Our support team is always
+              ready to help you with any questions.
+            </li>
+          </ul>
+        </section>
+
+        <section class="sell-products-section">
+          <h2>How does it work? (4 easy steps)</h2>
+          <ul>
+            <li>
+              <strong>Register on the platform</strong><br />Enter your email
+              and create a secure password.
+            </li>
+            <li>
+              <strong>Create your store</strong><br />Enter the name, upload a
+              logo, and add a description — this is your brand identity.
+            </li>
+            <li>
+              <strong>Add your products</strong><br />Upload photos, set prices,
+              write descriptions, and choose categories.
+            </li>
+            <li>
+              <strong>Receive orders and earn money</strong><br />Once
+              published, your products will be visible to buyers. You’ll receive
+              order notifications and payments to your account.
+            </li>
+          </ul>
+        </section>
+
+        <section class="sell-products-section">
+          <h2>What do you need?</h2>
+          <ul>
+            <li>
+              <strong>Active email address</strong><br />Notifications and
+              confirmations will be sent there.
+            </li>
+            <li>
+              <strong>Store name</strong><br />Unique, memorable, and reflecting
+              the essence of your business.
+            </li>
+            <li>
+              <strong>Contact phone number</strong><br />For communication and
+              identity verification if needed.
+            </li>
+            <li>
+              <strong>Documents (upon request)</strong><br />Some product
+              categories may require seller verification.
+            </li>
+          </ul>
+        </section>
+
+        <section class="sell-products-section">
+          <h2>What benefits do you get?</h2>
+          <ul>
+            <li>✔ Free registration — no hidden fees</li>
+            <li>✔ Convenient store management through your dashboard</li>
+            <li>✔ Detailed statistics on views, orders, and revenue</li>
+            <li>✔ Ability to communicate directly with customers</li>
+            <li>
+              ✔ Participation in seasonal promotions and platform campaigns
+            </li>
+            <li>✔ Store visibility on the homepage and in search results</li>
+          </ul>
+        </section>
+      </div>
+      <a
+        href="../dashboard/store-login.html"
+        class="sell-products-register-link"
+      >
+        Open your shop on BOBO
+      </a>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-columns">
+        <div class="column">
+          <h3>Get to Know Us</h3>
+          <ul>
+            <li><a href="./careers.html">Careers</a></li>
+            <li><a href="./aboutUs.html">About Us</a></li>
+            <li class="returns-footer-item">
+              <a href="returnAndOrders.html">Returns &amp; Orders</a>
+            </li>
+          </ul>
+        </div>
+        <div class="column">
+          <h3>Make Money with Us</h3>
+          <ul>
+            <li><a href="./sellProducts.html">Sell products on BOBO</a></li>
+            <li>
+              <a href="/dashboard/store-login.html">Open your shop on BOBO</a>
+            </li>
+            <!-- <li><a href="#">Sell apps on BOBO</a></li> -->
+          </ul>
+        </div>
+        <!-- <div class="column">
+          <h3>BOBO Payment Products</h3>
+          <ul>
+            <li><a href="#">BOBO Business Card</a></li>
+            <li><a href="#">Shop with Points</a></li>
+            <li><a href="#">Reload Your Balance</a></li>
+            <li><a href="#">BOBO Currency Converter</a></li>
+          </ul>
+        </div> -->
+        <div class="column">
+          <h3>Let Us Help You</h3>
+          <ul>
+            <li><a href="#" id="accountMenuLink">Your Account</a></li>
+            <li><a href="#">Your Orders</a></li>
+            <!-- <li><a href="#">Login For Sellers</a></li> -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <img src="#" alt="BOBO logo" class="logo" />
+        <div class="selectors">
+          <select>
+            <option>AZN - AZ. Manat</option>
+            <option>USD - U.S. Dollar</option>
+          </select>
+          <select>
+            <option>Azerbaijan</option>
+            <option>United States</option>
+          </select>
+        </div>
+      </div>
+    </footer>
+    <script src="./assets/js/header.js"></script>
+    <script src="./assets/js/country.js"></script>
+
+    <script src="./assets/js/navBar.js"></script>
+  </body>
+</html>
